@@ -15,30 +15,13 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18.x'
-          cache: 'npm'
-      - name: Install dependencies
-        run: npm install
-      - name: Build
-        run: npm run build
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-        with:
-          build_dir: build
-
   deploy:
-    needs: build
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
     steps:
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+      - uses: actions/checkout@master
+      - uses: redkubes/docusaurus-deploy-action@v1
+        with:
+          source-folder: pages
+          git-user: ${{ secrets.USER }}
+          git-password: ${{ secrets.GITHUB_TOKEN }}
+          deployment-branch: main
