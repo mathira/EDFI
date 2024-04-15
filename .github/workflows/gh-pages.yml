@@ -1,4 +1,3 @@
-# Workflow for building and deploying a Docusaurus project to GitHub Pages
 name: Build and Deploy Docusaurus to GitHub Pages
 
 on:
@@ -24,7 +23,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18.x'  # Asegúrate de que coincida con tu versión de Node especificada en "engines"
+          node-version: '18.x'
           cache: 'npm'
       - name: Install dependencies
         run: npm install
@@ -32,6 +31,8 @@ jobs:
         run: npm run build
       - name: Setup Pages
         uses: actions/configure-pages@v5
+        with:
+          build_dir: build
 
   deploy:
     needs: build
