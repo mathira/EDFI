@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@master
       - uses: redkubes/docusaurus-deploy-action@v1
         with:
-          source-folder: website
-          git-user: ${{ secrets.USER }}
+          source-folder: build
+          git-user: ${{ secrets.GITHUB_USERNAME }}
           git-password: ${{ secrets.GITHUB_TOKEN }}
           deployment-branch: main
