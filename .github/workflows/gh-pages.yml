@@ -26,8 +26,8 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "18.x" # Asegúrate de que coincida con tu versión de Node especificada en "engines"
-          cache: "npm"
+          node-version: '18.x'  # Asegúrate de que coincida con tu versión de Node especificada en "engines"
+          cache: 'npm'
       - name: Install dependencies
         run: npm install
       - name: Build
@@ -35,6 +35,11 @@ jobs:
       - name: Setup Pages
         id: setup_pages
         uses: actions/configure-pages@v5
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifact
+          path: build/
 
   deploy:
     needs: build
@@ -45,9 +50,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Download artifact
+      - name: Download Build Artifact
         uses: actions/download-artifact@v3
         with:
-          name: build
+          name: build-artifact
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
