@@ -19,6 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
+      - name: Create Pages Directory
+        run: mkdir -p build
       - uses: redkubes/docusaurus-deploy-action@v1
         with:
           source-folder: build
