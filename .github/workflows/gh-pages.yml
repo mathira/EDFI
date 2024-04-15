@@ -1,47 +1,40 @@
+name: Build and Deploy Docusaurus to GitHub Pages
+
 on:
   push:
     branches: ["main"]
   workflow_dispatch:
 
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   build:
+    name: Build Docusaurus
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
         with:
-          node-version: '18.x'
-          cache: 'npm'
+          fetch-depth: 0 # Ensures the full history is fetched
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm' # Change from yarn to npm
+
       - name: Install dependencies
-        run: npm install
-      - name: Build
+        run: npm install --legacy-peer-deps
+      - name: Build website
         run: npm run build
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
+
+      - name: Upload Build Artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          build_dir: build
+          path: build
 
   deploy:
     name: Deploy to GitHub Pages
     needs: build
-
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
     permissions:
-      pages: write # to deploy to Pages
-      id-token: write # to verify the deployment originates from an appropriate source
+      pages: write # Required to deploy to GitHub Pages
+      id-token: write # Required to verify the deployment originates from an appropriate source
 
-    # Deploy to the github-pages environment
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
