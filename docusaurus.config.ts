@@ -33,7 +33,7 @@ const config: Config = {
   // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
-    locales: ["en"],
+    locales: ["en", "es"],
   },
 
   presets: [
@@ -42,11 +42,11 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
+          // editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
         },
         blog: {
           showReadingTime: true,
-          editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
+          // editUrl: `https://github.com/${organizationName}/${projectName}/tree/main/`,
         },
         theme: {
           customCss: "./src/css/custom.css",
@@ -75,6 +75,10 @@ const config: Config = {
         {
           href: "https://github.com/mathira",
           label: "GitHub",
+          position: "right",
+        },
+        {
+          type: "localeDropdown",
           position: "right",
         },
       ],
