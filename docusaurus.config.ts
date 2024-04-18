@@ -32,7 +32,7 @@ const config: Config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: "en",
+    defaultLocale: "es",
     locales: ["en", "es"],
   },
 
@@ -58,7 +58,7 @@ const config: Config = {
   themeConfig: {
     image: "img/docusaurus-social-card.jpg",
     navbar: {
-      title: "EDFI",
+      // title: "EDFI",
       logo: {
         srcDark: "img/logo_light.png",
         alt: "EDFI Logo",
@@ -69,11 +69,11 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
           position: "left",
-          label: "Tutorials",
+          label: "Info",
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/mathira",
+          href: "https://github.com/${organizationName}",
           label: "GitHub",
           position: "right",
         },
@@ -117,7 +117,7 @@ const config: Config = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/mathira",
+              href: "https://github.com/${organizationName}",
             },
           ],
         },

@@ -10,94 +10,57 @@ Este es el template que estoy usando para mi documentación en EDFI. En este tut
 
 ## Antes de empezar
 
-Necesitamos instalar las siguientes herramientas.
-
 - **GIT**: Es necesario descargar Git desde [aquí](https://git-scm.com/). Si no estás familiarizado con Git, puedes profundizar más con este [tutorial de Atlassian](https://www.atlassian.com/es/git/tutorials/what-is-git).
 - **Cuenta de GitHub**: Debes crear una cuenta en [GitHub](https://github.com/), ya que será el lugar donde guardaremos nuestras versiones de Git así como configuraremos nuestro despliegue de aplicación (deploy) orquestado por GitHub Actions. Para leer más sobre GitHub, puedes consultar este [tutorial](https://docs.github.com/es/get-started/start-your-journey/creating-an-account-on-github).
-- **Visual Studio Code**: Utilizaremos Visual Studio Code como editor de código. Para descargarlo debes ingresar [aquí](https://code.visualstudio.com/download). Puedes apoyarte en la [documentación oficial](https://code.visualstudio.com/docs/setup/setup-overview) para ver pasos de su instalación.
-- **Node**: Para instalarlo puedes descargarlo desde su [sitio oficial](https://nodejs.org/en/download/current). Node.js es un entorno de ejecución de JavaScript.
+- **Visual Studio Code**: Utilizaremos Visual Studio Code como editor de código, pero puedes usar el que prefieras. Para descargarlo debes ingresar [aquí](https://code.visualstudio.com/download). Puedes apoyarte en la [documentación oficial](https://code.visualstudio.com/docs/setup/setup-overview) para ver pasos de su instalación.
+- **NodeJs**: Para instalarlo puedes descargarlo desde su [sitio oficial](https://nodejs.org/en/download/current). Node.js es un entorno de ejecución de JavaScript.
 
 ## Herramientas instaladas
 
 Una vez que contamos con las herramientas instaladas, vamos a hacer un fork de este proyecto. Un fork es una copia del proyecto que puedes modificar sin afectar el proyecto original. Para hacer nuestro fork debemos ingresar al siguiente link [EDFI GitHub](https://github.com/mathira/EDFI) y seguir los pasos ilustrados a continuación:
 
-1. Haz clic aquí: ![Fork Project](img/fork_project.png)
-2. Te llevará a esta página: ![Fork Page](img/fork_page.png)
-3. Finalmente, haz clic en "Crear fork": ![Create Fork](img/create_fork.png)
+1. Haz clic aquí: ![Fork Project](imagen1-url)
+2. Te llevará a esta página: ![Fork Page](imagen2-url)
+3. Finalmente, haz clic en "Crear fork": ![Create Fork](imagen3-url)
 
 Como resultado, tendrás el siguiente proyecto en tu cuenta:
 
-![Your Fork](img/your_fork.png)
+![Your Fork](imagen4-url)
 
-### Obtener el Proyecto Localmente
+### Obtener el proyecto de manera local
 
-Para trabajar en tu proyecto desde tu máquina local, necesitas clonarlo desde GitHub. Aquí te explico cómo hacerlo dependiendo de tu sistema operativo.
+1. Abre Visual Studio Code o tu editor de preferencia.
+2. Abre la terminal integrada de Visual Studio Code.
+3. Clona el repositorio de manera local. Puede hacerse por SSH o HTTPS, en este caso usaremos HTTPS.
 
-1. **Abre la terminal**:
+![Cloning Repository](imagen-url)
 
-   - **Windows**: Utiliza la Terminal de Windows (CMD) o PowerShell.
-   - **macOS**: Abre la Terminal (puedes encontrarla en Applications > Utilities).
-   - **Linux**: Depende de la distribución que estés usando, pero generalmente se accede a través de aplicaciones como Terminal, Konsole, o Gnome Terminal.
+4. Una vez hecho, abre tu proyecto con Visual Studio Code.
 
-_Nota: En mi caso, estaré trabajando sobre Windows._
-
-![Abrir Terminal](img/open_terminal.png)
-
-2. **Clona el repositorio**:
-
-   - Para clonar el repositorio, utiliza el método HTTPS, que es compatible con todos los sistemas operativos y no requiere configuración adicional de SSH. Ejecuta el siguiente comando en tu terminal:
-
-   ```bash
-   git clone https://github.com/tuusuario/tuproyecto.git
-
-   ```
-
-   ![Abrir Terminal](img/clone_terminal.png)
-
-3. Una vez hecho, abre tu proyecto con Visual Studio Code.
-
-![Open Project](img/open_project0.png)
-![Open Project](img/open_project.png)
+![Open Project](imagen-url)
 
 ### Correr nuestro proyecto local
 
-1. Abre tu terminal en Visual Studio Code.
+1. Ejecuta el comando `npm install` o `npm i` y espera a que termine, esto instalará nuestras dependencias.
 
-![Open Project](img/open_project1.png)
+![Install Dependencies](imagen-url)
 
-2. Ejecuta el comando `npm install` o `npm i` y espera a que termine, esto instalará nuestras dependencias.
+2. Levanta el proyecto localmente con `npm run start`.
 
-![Install Dependencies](img/terminal1.png)
+![Run Project](imagen-url)
 
-3. Levanta el proyecto localmente con `npm run start`.
+3. Observa el resultado en tu navegador.
 
-![Run Project](img/terminal2.png)
+![View in Browser](imagen-url)
 
-4. **Verifica el Resultado en tu Navegador**
+La estructura del proyecto es la siguiente:
 
-   Una vez completado el despliegue, podrás ver la URL en la terminal, a la cual deberás acceder para visualizar tu sitio web. Esta URL es la dirección pública donde está alojado tu proyecto.
+![Project Structure](imagen-url)
 
-   - **URL del Proyecto**: Observa la terminal para encontrar la URL.
+- `blog`: puedes crear o modificar tus blogs.
+- `docs`: puedes agregar o modificar tus documentos.
 
-     ![URL del Proyecto](img/terminal22.png)
-
-   - **Vista en el Navegador**: Abre tu navegador y accede a la URL para ver tu sitio en acción.
-
-     ![Vista en Navegador](img/terminal3.png)
-
-### Estructura del Proyecto
-
-La estructura organizativa de tu proyecto se muestra a continuación:
-
-![Estructura del Proyecto](img/structure.png)
-
-A continuación, se describen los directorios principales y sus usos:
-
-- `blog`: Este directorio es donde puedes crear o modificar entradas para tu blog.
-- `docs`: Utiliza este espacio para agregar o modificar documentos técnicos o informativos.
-- `i18n`: Este directorio se utiliza para agregar o modificar traducciones del contenido. Dentro de esta carpeta encontrarás una estructura similar a la de los directorios `blog` y `docs`, pero adaptada para soportar contenido en inglés.
-
-_Nota: Para mas informacion sobre [i18n](https://docusaurus.io/docs/i18n/tutorial)_
+Este proyecto cuenta con traducción al español. Para actualizarla, puedes ir a la carpeta `i18n` que mantiene la misma estructura.
 
 ## Publicar el proyecto en GitHub Pages
 
@@ -167,7 +130,7 @@ const organizationName = "mathira"; // Tu usuario de GitHub
 const projectName = "EDFI"; // El nombre de tu proyecto
 ```
 
-# Realizando tu Primer Commit & Push
+# Realizando tu Primer Commit && Push
 
 Una vez que hayas completado tus cambios, puedes subirlos al repositorio con los siguientes comandos:
 
@@ -177,36 +140,25 @@ git commit -m "Mi primer commit"
 git push -M main
 ```
 
-_Nota: Tambien puedes utilizar la interface de [Visual Studio Code](https://code.visualstudio.com/docs/sourcecontrol/intro-to-git) para hacer commit y push._
-
 # GitHub Actions
 
-Después de realizar cambios en tu repositorio, puedes verificar el proceso de ejecución de tus GitHub Actions. Sigue estos pasos para acceder a la información detallada:
+Una vez que hayas realizado tus cambios, puedes verificar el proceso de tu GitHub Action en la siguiente URL:
 
-1. **Accede a GitHub Actions**:
+`https://github.com/{tuusuario}/{tuproyecto}/actions`
 
-   - Visita la URL de las acciones de tu proyecto: `https://github.com/{tuusuario}/{tuproyecto}/actions`. Asegúrate de reemplazar `{tuusuario}` y `{tuproyecto}` con tu nombre de usuario y el nombre de tu proyecto, respectivamente.
-
-2. **Visualiza una Ejecución Específica**:
-   - Haz clic en la pestaña `Actions`.
-   - Luego, selecciona el primer ítem en la lista bajo el título de la acción para ver el detalle del proceso de ejecución.
-
-![Proceso de GitHub Actions](img/github1.png)
-![Proceso de GitHub Actions](img/github2.png)
+![Proceso de GitHub Actions](#) <!-- Reemplaza '#' con la URL de la imagen del proceso -->
 
 Como se muestra en la imagen, el proceso consta de dos pasos principales:
 
 1. **Build**: Compilación del proyecto.
 2. **Deploy**: Despliegue del proyecto.
 
-_Estos pasos te permitirán observar cada etapa de la ejecución de la acción, desde la inicialización hasta la finalización, facilitando el seguimiento y diagnóstico de cualquier problema._
+Al final, se te proporcionará la URL donde tu proyecto ha sido publicado.
 
-Al final, si no existieron errores, se te proporcionará la URL donde tu proyecto ha sido publicado.
-
-![Proceso de GitHub Actions](img/github3.png)
+![Resultado del Deploy](#) <!-- Reemplaza '#' con la URL de la imagen del resultado -->
 
 ## Más Tutoriales
 
-En la siguiente [sección](/docs/Tutorials/Docusaurus/intro/), te dejo un tutorial creado por Docusaurus que he traducido al español.
+En la siguiente sección, te dejo un tutorial creado por Docusaurus que he traducido al español.
 
 ¡Éxitos!
