@@ -21,13 +21,13 @@ Necesitamos instalar las siguientes herramientas.
 
 Una vez que contamos con las herramientas instaladas, vamos a hacer un fork de este proyecto. Un fork es una copia del proyecto que puedes modificar sin afectar el proyecto original. Para hacer nuestro fork debemos ingresar al siguiente link [EDFI GitHub](https://github.com/mathira/EDFI) y seguir los pasos ilustrados a continuación:
 
-1. Haz clic aquí: ![Fork Project](img/fork_project.png)
-2. Te llevará a esta página: ![Fork Page](img/fork_page.png)
-3. Finalmente, haz clic en "Crear fork": ![Create Fork](img/create_fork.png)
+1. Haz clic aquí: ![Fork Project](img/MT01/fork_project.png)
+2. Te llevará a esta página: ![Fork Page](img/MT01/fork_page.png)
+3. Finalmente, haz clic en "Crear fork": ![Create Fork](img/MT01/create_fork.png)
 
 Como resultado, tendrás el siguiente proyecto en tu cuenta:
 
-![Your Fork](img/your_fork.png)
+![Your Fork](img/MT01/your_fork.png)
 
 ### Obtener el Proyecto Localmente
 
@@ -41,7 +41,7 @@ Para trabajar en tu proyecto desde tu máquina local, necesitas clonarlo desde G
 
 _Nota: En mi caso, estaré trabajando sobre Windows._
 
-![Abrir Terminal](img/open_terminal.png)
+![Abrir Terminal](img/MT01/open_terminal.png)
 
 2. **Clona el repositorio**:
 
@@ -52,26 +52,26 @@ _Nota: En mi caso, estaré trabajando sobre Windows._
 
    ```
 
-   ![Abrir Terminal](img/clone_terminal.png)
+   ![Abrir Terminal](img/MT01/clone_terminal.png)
 
 3. Una vez hecho, abre tu proyecto con Visual Studio Code.
 
-![Open Project](img/open_project0.png)
-![Open Project](img/open_project.png)
+![Open Project](img/MT01/open_project0.png)
+![Open Project](img/MT01/open_project.png)
 
 ### Correr nuestro proyecto local
 
 1. Abre tu terminal en Visual Studio Code.
 
-![Open Project](img/open_project1.png)
+![Open Project](img/MT01/open_project1.png)
 
 2. Ejecuta el comando `npm install` o `npm i` y espera a que termine, esto instalará nuestras dependencias.
 
-![Install Dependencies](img/terminal1.png)
+![Install Dependencies](img/MT01/terminal1.png)
 
 3. Levanta el proyecto localmente con `npm run start`.
 
-![Run Project](img/terminal2.png)
+![Run Project](img/MT01/terminal2.png)
 
 4. **Verifica el Resultado en tu Navegador**
 
@@ -79,17 +79,17 @@ _Nota: En mi caso, estaré trabajando sobre Windows._
 
    - **URL del Proyecto**: Observa la terminal para encontrar la URL.
 
-     ![URL del Proyecto](img/terminal22.png)
+     ![URL del Proyecto](img/MT01/terminal22.png)
 
    - **Vista en el Navegador**: Abre tu navegador y accede a la URL para ver tu sitio en acción.
 
-     ![Vista en Navegador](img/terminal3.png)
+     ![Vista en Navegador](img/MT01/terminal3.png)
 
 ### Estructura del Proyecto
 
 La estructura organizativa de tu proyecto se muestra a continuación:
 
-![Estructura del Proyecto](img/structure.png)
+![Estructura del Proyecto](img/MT01/structure.png)
 
 A continuación, se describen los directorios principales y sus usos:
 
@@ -191,8 +191,8 @@ Después de realizar cambios en tu repositorio, puedes verificar el proceso de e
    - Haz clic en la pestaña `Actions`.
    - Luego, selecciona el primer ítem en la lista bajo el título de la acción para ver el detalle del proceso de ejecución.
 
-![Proceso de GitHub Actions](img/github1.png)
-![Proceso de GitHub Actions](img/github2.png)
+![Proceso de GitHub Actions](img/MT01/github1.png)
+![Proceso de GitHub Actions](img/MT01/github2.png)
 
 Como se muestra en la imagen, el proceso consta de dos pasos principales:
 
@@ -203,7 +203,7 @@ _Estos pasos te permitirán observar cada etapa de la ejecución de la acción, 
 
 Al final, si no existieron errores, se te proporcionará la URL donde tu proyecto ha sido publicado.
 
-![Proceso de GitHub Actions](img/github3.png)
+![Proceso de GitHub Actions](img/MT01/github3.png)
 
 ## Más Tutoriales
 
