@@ -9,7 +9,7 @@ const config: Config = {
   organizationName,
   projectName,
   title: "EDFI",
-  tagline: "Make your docu page",
+  tagline: "Bienvenidos a mi documentacion",
   favicon: "img/favicon.ico",
 
   // Set the production url of your site here
@@ -56,7 +56,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    image: "img/docusaurus-social-card.jpg",
+    image: "img/logo_light.jpg",
     navbar: {
       // title: "EDFI",
       logo: {
@@ -73,7 +73,7 @@ const config: Config = {
         },
         { to: "/blog", label: "Blog", position: "left" },
         {
-          href: "https://github.com/${organizationName}",
+          href: `https://github.com/${organizationName}`,
           label: "GitHub",
           position: "right",
         },
@@ -90,8 +90,8 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Tutorial",
-              to: "/docs/Tutorials/Docusaurus/intro",
+              label: "Docusaurus Tutorial",
+              to: "https://docusaurus.io/docs",
             },
           ],
         },
@@ -117,7 +117,7 @@ const config: Config = {
             },
             {
               label: "GitHub",
-              href: "https://github.com/${organizationName}",
+              href: `https://github.com/${organizationName}`,
             },
           ],
         },
