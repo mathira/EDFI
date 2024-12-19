@@ -9,7 +9,7 @@ El juego inclusivo es un dispositivo interactivo diseñado para ofrecer una expe
 
 El juego emite señales auditivas y visuales de forma combinada, permitiendo que niños no videntes lo disfruten mediante los sonidos y que las luces sean el estímulo principal para aquellos con discapacidades auditivas. Una pantalla adicional muestra el estado del dispositivo, como si está encendido o en modo de juego activo, haciendo que sea accesible para cualquier usuario.
 
-Además, su diseño incluye un botón táctil central que facilita la interacción, ofreciendo una experiencia intuitiva. Al responder con luces y sonidos al pulsarlo, el juego crea un entorno dinámico que involucra a los jugadores de manera activa, fomentando la curiosidad, la atención y la colaboración.
+Además, su diseño incluye un pulsador que se encuentra en un lateral, facilitando la interacción y ofreciendo una experiencia intuitiva. Al responder con luces y sonidos al pulsarlo, el juego crea un entorno dinámico que involucra a los jugadores de manera activa, fomentando la curiosidad, la atención y la colaboración.
 
 El propósito de este juego es no solo entretener, sino también ser un vehículo para fortalecer los lazos familiares y abrir el camino hacia una mayor inclusión en el ámbito lúdico, inspirando el desarrollo de más herramientas accesibles para todos.
 
